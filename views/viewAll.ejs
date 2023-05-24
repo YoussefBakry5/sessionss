@@ -1,0 +1,47 @@
+<html lang="en">
+<body>
+  <%- include("./partials/nav.ejs") %>
+     <div>
+      <h2>All Employees</h2>
+      <% if (employees.length> 0) { %>
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Action</th>
+          </tr>
+          <% employees.forEach(emp=> { %>
+            <tr>
+              <td>
+                <%= emp.UserName %>
+              </td>
+              <td>
+                <%= emp.Type %>
+              </td>
+              <td><a href="/emp/<%= emp.id %>">View More</a></td>
+            </tr>
+            <% }) %>
+        </table>
+        <% } else { %>
+          <p>There are no employees to display...</p>
+          <% } %>
+            </div> 
+  
+
+
+    
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

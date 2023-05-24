@@ -1,0 +1,20 @@
+<html lang="en">
+
+<body>
+    <%- include("./partials/nav.ejs") %>
+        <div>
+            <h1>Signup</h1>
+        </div>
+        <div>
+            <form action="/signup-action" method="post" enctype="multipart/form-data">
+                <input type="text" name="un" placeholder="Username">
+                <input type="password" name="pw" placeholder="Password">
+                <input type="file" name="img">
+                <input type="hidden" name="type" value="client" >
+                <input type="submit" name="submit">
+            </form>
+        </div>
+
+</body>
+
+</html>
